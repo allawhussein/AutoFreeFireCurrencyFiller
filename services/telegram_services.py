@@ -1,9 +1,8 @@
 import requests
-
+from variables import *
 def send_msg(text):
     print(" -TSM: sending suspecious order to captain")
-    token = "1534305945:AAFME_Dc7oUXKMhBWbJR0NYKMlGb8qQKq4w"
-    chat_id = "-1001199209449"
+    #token and chat ID are found in a private file
     url = 'https://api.telegram.org/bot' + token + '/sendMessage' + '?chat_id=' + chat_id + '&text='+ text
     result = requests.get(url)
     print(" -TSM: sending the failing order ")
